@@ -19,7 +19,7 @@ public class CharacterAnimationController : MonoBehaviour
         //Handle running and idling
         if (Input.GetAxis("Horizontal") != 0)
         {
-            animator.SetTrigger("Run");
+            animator.SetTrigger("RunTrigger");
         }
         else
         {
@@ -27,13 +27,9 @@ public class CharacterAnimationController : MonoBehaviour
         }
         
         // Handle Double Jump
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("DoubleJumpTrigger");
-        }
-        else
-        {
-            animator.SetTrigger("Idle");
         }
         
         // Handle Hit
@@ -47,5 +43,18 @@ public class CharacterAnimationController : MonoBehaviour
         {
             animator.SetTrigger("FallTrigger");
         }
+        
+        // Handle Jumping
+        if (Input.GetButtonDown("Jump"))
+        {
+            animator.SetTrigger("JumpTrigger");
+        }
+        
+        // Handle Wall Jumping
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            animator.SetTrigger("WallJumpTrigger");
+        }
+        
     }
 }

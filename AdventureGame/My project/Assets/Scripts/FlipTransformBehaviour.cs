@@ -13,6 +13,8 @@ public class FlipTransformBehaviour : MonoBehaviour
         }
 
         if (!Input.GetKeyDown(key2)) return;
-        transform.rotation = Quaternion.Euler(0, direction2, 0);
+        {
+            transform.rotation = Quaternion.Euler(0, direction2, 0);
+        }
     }
 }
