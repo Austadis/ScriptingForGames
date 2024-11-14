@@ -1,18 +1,27 @@
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class SimpleImageBehaviour : MonoBehaviour
 {
     private Image imageObj;
-    public SimpleFloatData dataObj;
+    public SimpleFloatData healthDataObj;
+    public SimpleFloatData staminaDataObj;
 
     private void Start()
     {
         imageObj = GetComponent<Image>();
     }
 
-    public void UpdateWithFloatData()
+    public void UpdateWithFloatData(bool isHealth)
     {
-        imageObj.fillAmount = dataObj.value;
+        if (isHealth && healthDataObj != null)
+        {
+            imageObj.fillAmount = healthDataObj.value;
+        }
+        else if (!isHealth && staminaDataObj != null)
+        {
+            imageObj.fillAmount = staminaDataObj.value;
+        }
     }
 }
