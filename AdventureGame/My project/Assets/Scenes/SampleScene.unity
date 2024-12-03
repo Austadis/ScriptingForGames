@@ -146,7 +146,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.18, y: 0.09, z: 0.2}
+  m_Size: {x: 0.17, y: 0.06, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &63112709
 Rigidbody:
@@ -175,6 +175,31 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &63112710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63112704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 400653726457048828d1fe882e170c07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &63112711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63112704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17acdf962d8954222ae7fd8b4c68a486, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTag: Player
 --- !u!1 &85551373
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,6 +335,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63112710}
+        m_TargetAssemblyTypeName: DestroyOnEvent, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -684,8 +721,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16, y: 0.14, z: 0.2}
-  m_Center: {x: 0, y: -0.008, z: 0}
+  m_Size: {x: 0.16, y: 0.47, z: 0.2}
+  m_Center: {x: 0, y: 0.14, z: 0}
 --- !u!114 &428606634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,6 +743,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63112710}
+        m_TargetAssemblyTypeName: DestroyOnEvent, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -963,7 +1012,7 @@ Transform:
   m_GameObject: {fileID: 455852902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.95, y: 2.89, z: 0.08831767}
+  m_LocalPosition: {x: -10.47, y: 2.89, z: 0.08831767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1064,8 +1113,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.16, y: 0.32, z: 0.2}
-  m_Center: {x: 0, y: -0.07, z: 0}
+  m_Size: {x: 0.16, y: 0.48, z: 0.2}
+  m_Center: {x: 0, y: -0.01, z: 0}
 --- !u!114 &547365889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,6 +1135,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 63112710}
+        m_TargetAssemblyTypeName: DestroyOnEvent, Assembly-CSharp
+        m_MethodName: DestroyObject
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -11097,11 +11158,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6433307833110429941, guid: 6b9f3ae6f34b6435b9fbf51f9442b307, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.08
+      value: -9.08
       objectReference: {fileID: 0}
     - target: {fileID: 6433307833110429941, guid: 6b9f3ae6f34b6435b9fbf51f9442b307, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.78
+      value: 4.94
       objectReference: {fileID: 0}
     - target: {fileID: 6433307833110429941, guid: 6b9f3ae6f34b6435b9fbf51f9442b307, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11145,6 +11206,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1284163996596427352, guid: 6b9f3ae6f34b6435b9fbf51f9442b307, type: 3}
       insertIndex: -1
       addedObject: {fileID: 63112709}
+    - targetCorrespondingSourceObject: {fileID: 1284163996596427352, guid: 6b9f3ae6f34b6435b9fbf51f9442b307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 63112710}
+    - targetCorrespondingSourceObject: {fileID: 1284163996596427352, guid: 6b9f3ae6f34b6435b9fbf51f9442b307, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 63112711}
   m_SourcePrefab: {fileID: 100100000, guid: 6b9f3ae6f34b6435b9fbf51f9442b307, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
